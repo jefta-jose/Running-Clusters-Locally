@@ -1,9 +1,0 @@
-replicaCount: 4
-
-image:
-  repository: react-kube-demo
-  pullPolicy: Never
-
-service:
-  type: NodePort
-  port: 80
