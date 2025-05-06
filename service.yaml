@@ -1,0 +1,17 @@
+# # this yaml defines a kubernetes service that exposes a react application runnning inside a kubernetes cluster
+# apiVersion: v1 
+# kind: Service 
+# metadata:
+#   name: react-service
+#   namespace: react-demo
+
+# spec:
+
+#   selector: # this tells the service to look for pods with the label app: react-app as defined in the deployment yaml. it will route traffic to those pods
+#     app: react-app 
+
+#   ports:
+#     - protocol: TCP
+#       port: 80 # the port exposed by the service (outbound)
+#       targetPort: 80 # the port where the application is listening to (inbound)
+#   type: NodePort
