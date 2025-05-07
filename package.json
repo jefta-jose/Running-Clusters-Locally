@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cpu-server": "node cpu-api.js",
+    "start-all": "concurrently \"npm run cpu-server\" \"npm run preview\""
   },
   "dependencies": {
     "react": "^18.3.1",

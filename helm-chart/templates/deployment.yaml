@@ -19,3 +19,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 80
+          #important for scaling purposes
+          resources:
+            requests:
+              cpu: "100m"
+            limits:
+              cpu: "200m"
